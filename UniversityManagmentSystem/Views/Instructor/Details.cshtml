@@ -1,0 +1,125 @@
+﻿@model Instructor
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Tables / Data - NiceAdmin Bootstrap Template</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="/assets/img/favicon.png" rel="icon">
+    <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: NiceAdmin
+    * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+    * Updated: Apr 20 2024 with Bootstrap v5.3.3
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+<body>
+    <main id="main" class="main" style="margin:20px 50px 40px 50px">
+
+    <div class="pagetitle">
+        <h1>Form Elements</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item">Details</li>
+                <li class="breadcrumb-item active">Instructor</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-body">
+                            <h5 class="card-title">Instructor <b>@Model.Name</b> Info</h5>
+
+                            <div class="row mb-3">
+                                <label asp-for="Name" class="col-sm-2 col-form-label"></label>
+                                <div class="col-sm-10">
+                                    <input asp-for="Name" readonly value="@Model.Name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label asp-for="Email" class="col-sm-2 col-form-label"></label>
+                                <div class="col-sm-10">
+                                    <input asp-for="Email" readonly value="@Model.Email" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label asp-for="Salary" class="col-sm-2 col-form-label"></label>
+                                <div class="col-sm-10">
+                                    <input asp-for="Salary" readonly value="@Model.Salary" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label asp-for="Address" class="col-sm-2 col-form-label"></label>
+                                <div class="col-sm-10">
+                                    <input asp-for="Address" readonly value="@Model.Address" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label asp-for="Phone" class="col-sm-2 col-form-label"></label>
+                                <div class="col-sm-10">
+                                    <input asp-for="Phone" readonly value="@Model.Phone" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label asp-for="Department.Name" class="col-sm-2 col-form-label">Department Name</label>
+                                <div class="col-sm-10">
+                                    <input asp-for="Department.Name" readonly value="@Model.Department.Name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label asp-for="Course.Name" class="col-sm-2 col-form-label">Course Name</label>
+                                <div class="col-sm-10">
+                                    <input asp-for="Course.Name" readonly value="@Model.Course.Name" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label"></label>
+                                <div class="col-sm-10">
+                                    <a  class="btn btn-primary" asp-action="Index" asp-controller="Instructor">Back To List</a>
+                                </div>
+                            </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main><!-- End #main -->
+</body>
+</html>
